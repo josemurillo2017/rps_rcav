@@ -1,0 +1,15 @@
+<h1> You (played) <%= @move %></h1>
+
+<h1>
+  The computer played
+  <% computer_move =["rock", "paper", "scissors"].sample
+  computer_move %>
+  <%  if computer_move = "rock" %>
+  You lose!
+  <% elsif computer_move = "paper" %>
+  You win!
+  <% else %>
+  You tied!
+  <% end %>
+
+</h1>
