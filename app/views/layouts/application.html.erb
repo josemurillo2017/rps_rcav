@@ -6,29 +6,42 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <style>
+  .micon {
+    font-size: 144px
+  }
+  </style>
+
 </head>
 <body>
   <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <h1 class="text-center">What is your next move? </h1>
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-md-8 col-md-offset-2 col-xs-12">
         <div class="btn-group btn-group-justified">
           <a href="/rock" class="btn btn-block btn-primary">
-            Play Rock
+            <i class="fa micon fa-hand-rock-o"></i>
           </a>
 
           <a href="/paper" class="btn btn-block btn-info">
-            Play Paper
+            <i class="fa micon fa-hand-paper-o"></i>
           </a>
 
           <a href="/scissors" class="btn btn-block btn-primary">
-            Play Scissors
+            <i class="fa micon fa-hand-scissors-o"></i>
           </a>
         </div>
       </div>
     </div>
-<%= yield %>
-</div>
 
-</body>
-</html>
+    <%= yield %>
+    
+
+  </body>
+  </html>

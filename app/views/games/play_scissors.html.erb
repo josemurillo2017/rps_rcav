@@ -1,15 +1,38 @@
-<h1> You (played) <%= @move %></h1>
-
-<h1>
-  The computer played
-  <% computer_move =["rock", "paper", "scissors"].sample
-  computer_move %>
-  <%  if computer_move = "rock" %>
-  You lose!
-  <% elsif computer_move = "paper" %>
-  You win!
-  <% else %>
-  You tied!
-  <% end %>
-
-</h1>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center"> You played  </h1>
+    <h1 class="text-center"><i class="fa micon fa-hand-scissors-o "></i></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center">
+      The computer played
+    </h1>
+    <h1 class="text-center">
+      <%
+      num = rand(3)
+      computer_move =["rock", "paper", "scissors"][num]
+      picture =["fa-hand-rock-o", "fa-hand-paper-o", "fa-hand-scissors-o"][num]
+      %>
+      <i class="fa micon <%= picture %>"></i>
+    </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="well text-center">
+      <h1>
+        <span class="label label-success">
+          <%  if computer_move === "rock" %>
+          You lose!
+          <% elsif computer_move === "paper" %>
+          You win!
+          <% else %>
+          You tied!
+          <% end %>
+        </span>
+      </h1>
+    </div>
+  </div>
+</div>
